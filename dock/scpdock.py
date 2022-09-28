@@ -2527,7 +2527,7 @@ class SCPDock:
 			rT = 255 - int(cfg.ROITrnspVal) * 255 / 100
 		except:
 			rT = 100
-		clr.setAlpha(rT)
+		clr.setAlpha(int(rT))
 		f = cfg.utls.getFeaturebyID(sourceLayer, ID)
 		cfg.rbbrBndPol = cfg.qgisGuiSCP.QgsHighlight(cfg.cnvs, f.geometry(), sourceLayer)
 		cfg.rbbrBndPol.setWidth(2)
